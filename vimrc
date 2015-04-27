@@ -23,6 +23,7 @@ Plugin 'ervandew/supertab'               " completion on insert mode
 Plugin 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
 Plugin 'mattn/emmet-vim'                 " expanding abbreviations
 Plugin 'ctrlpvim/ctrlp.vim'              " file finder
+let g:airline_powerline_fonts = 1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|node_modules|coverage|.log|.git|.hg|.svn|.pyc)$'
 
 " Snippet engine
