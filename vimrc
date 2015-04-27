@@ -13,7 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins
 " Environment
 Plugin 'bling/vim-airline'               " better status/tabline
-Plugin 'ctrlpvim/ctrlp.vim'              " file finder
 Plugin 'scrooloose/nerdtree'             " file finder sidebar
 Plugin 'nathanaelkane/vim-indent-guides' " visual indent
 Plugin 'scrooloose/nerdcommenter'        " better commenting
@@ -23,6 +22,8 @@ Plugin 'itspriddle/vim-stripper'         " strip trailing whitespace
 Plugin 'ervandew/supertab'               " completion on insert mode
 Plugin 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
 Plugin 'mattn/emmet-vim'                 " expanding abbreviations
+Plugin 'ctrlpvim/ctrlp.vim'              " file finder
+let g:ctrlp_custom_ignore = '\v[\/](tmp|node_modules|coverage|.log|.git|.hg|.svn|.pyc)$'
 
 " Snippet engine
 if has("python") | Plugin 'SirVer/ultisnips'
@@ -110,7 +111,7 @@ set listchars+=precedes:< " The character to show in the last column when wrap i
 
 " Behaviors
 set autoread              " Automatically reload changes if detected
-set wildmenu              " Turn on WiLd menu
+set wildmenu              " Turn on Wild menu
 set hidden                " Change buffer - without saving
 set history=768           " Number of things to remember in history.
 set cf                    " Enable error files & error jumping.
