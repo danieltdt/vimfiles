@@ -55,6 +55,10 @@ Plugin 'EHartC/Spink'
 Plugin 'vim-scripts/twilight256.vim'
 Plugin 'nanotech/jellybeans.vim'
 
+" Dictionaries
+Plugin 'guileen/vim-node-dict'
+au FileType javascript set dictionary+=~/.vim/bundle/vim-node-dict/dict/node.dict
+
 " Others
 Plugin 'moll/vim-node'                   " node.js tools
 Plugin 'tpope/vim-rails'                 " rails tools
@@ -110,6 +114,7 @@ set listchars+=precedes:< " The character to show in the last column when wrap i
                           " off and the line continues beyond the left of the screen
 
 " Behaviors
+set complete+=k           " Enable dictonary on completion
 set autoread              " Automatically reload changes if detected
 set wildmenu              " Turn on Wild menu
 set hidden                " Change buffer - without saving
