@@ -67,7 +67,6 @@ Plugin 'tpope/vim-classpath'             " java classpath support
 Plugin 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
 Plugin 'Shutnik/jshint2.vim'             " a better js lint
 Plugin 'ngmy/vim-rubocop'                " rubocop support
-autocmd BufWritePre *.rb :RuboCop -a
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
