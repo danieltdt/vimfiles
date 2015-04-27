@@ -80,6 +80,8 @@ filetype plugin indent on    " required
 
 " turn on syntax highlighting
 syntax on
+set background=dark
+colorscheme jellybeans
 
 set encoding=utf-8
 
