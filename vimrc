@@ -46,6 +46,14 @@ Plugin 'tpope/vim-markdown'              " markdown support
 Plugin 'tpope/vim-cucumber'              " cucumber support
 Plugin 'lervag/vimtex'                   " LaTeX support
 
+" Coloschemes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'justincampbell/vim-railscasts'
+Plugin 'wellsjo/wells-colorscheme.vim'
+Plugin 'EHartC/Spink'
+Plugin 'vim-scripts/twilight256.vim'
+Plugin 'nanotech/jellybeans.vim'
+
 " Others
 Plugin 'moll/vim-node'                   " node.js tools
 Plugin 'tpope/vim-rails'                 " rails tools
