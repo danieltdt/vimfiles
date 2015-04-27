@@ -15,8 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'               " better status/tabline
 Plugin 'ctrlpvim/ctrlp.vim'              " file finder
 Plugin 'scrooloose/nerdtree'             " file finder sidebar
-map <C-n> :NERDTreeToggle<CR>
-
 Plugin 'nathanaelkane/vim-indent-guides' " visual indent
 Plugin 'scrooloose/nerdcommenter'        " better commenting
 Plugin 'tpope/vim-repeat'                " better command repeating with map
@@ -53,10 +51,9 @@ Plugin 'moll/vim-node'                   " node.js tools
 Plugin 'tpope/vim-rails'                 " rails tools
 Plugin 'tpope/vim-classpath'             " java classpath support
 Plugin 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
+Plugin 'Shutnik/jshint2.vim'             " a better js lint
 Plugin 'ngmy/vim-rubocop'                " rubocop support
 autocmd BufWritePre *.rb :RuboCop -a
-
-Plugin 'Shutnik/jshint2.vim'             " a better js lint
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -140,6 +137,9 @@ set wildignore+=*/node_modules/*
 " map paste mode (fixes autoident on terminal)
 nnoremap <F2> :set invpaste paste?<CR>
 
+" toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 " <Ctrl-l> redraws the screen and removes any search highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
@@ -154,4 +154,3 @@ inoremap <leader>mj <Esc>:m .+1<CR>==gi
 inoremap <leader>mk <Esc>:m .-2<CR>==gi
 vnoremap <leader>mj :m '>+1<CR>gv=gv
 vnoremap <leader>mk :m '<-2<CR>gv=gv
-
