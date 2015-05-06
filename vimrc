@@ -23,6 +23,7 @@ Plugin 'ervandew/supertab'               " completion on insert mode
 Plugin 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
 Plugin 'mattn/emmet-vim'                 " expanding abbreviations
 Plugin 'ctrlpvim/ctrlp.vim'              " file finder
+Plugin 'iurifq/ctrlp-rails.vim'          " rails support when finding files
 let g:airline_powerline_fonts = 1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|node_modules|coverage|.log|.git|.hg|.svn|.pyc)$'
 
@@ -155,6 +156,12 @@ nnoremap <F2> :set invpaste paste?<CR>
 
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" open finder on rails models dir
+nnoremap <s-m> :CtrlPModels<CR>
+nnoremap <s-v> :CtrlPViews<CR>
+nnoremap <s-c> :CtrlPControllers<CR>
+nnoremap <s-s> :CtrlPSpecs<CR>
 
 " <Ctrl-l> redraws the screen and removes any search highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l>
