@@ -106,9 +106,9 @@ set matchtime=2           " How many tenths of a second to blink
 set list                  " Show invisible characters
 set t_Co=256              " Force 256 colors
 set listchars=""          " Reset the listchars
-set listchars=tab:\⇥\     " A tab should display as "⇥ ", trailing whitespace as "."
+set listchars+=tab:\⇥\    " A tab should display as "⇥ ", trailing whitespace as "."
 set listchars+=trail:.    " Show trailing spaces as dots
-set listchars=eol:¬       " Show end-of-line as "¬"
+set listchars+=eol:¬      " Show end-of-line as "¬"
 set listchars+=extends:>  " The character to show in the last column when wrap is
                           " off and the line continues beyond the right of the screen
 set listchars+=precedes:< " The character to show in the last column when wrap is
