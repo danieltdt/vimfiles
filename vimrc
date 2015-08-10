@@ -44,6 +44,7 @@ Plugin 'gregsexton/gitv'                 " gitk for vim
 
 " Languages
 Plugin 'vim-ruby/vim-ruby'               " ruby support
+Plugin 'jelera/vim-javascript-syntax'    " javascript support
 Plugin 'tpope/vim-haml'                  " haml support
 Plugin 'tpope/vim-markdown'              " markdown support
 Plugin 'tpope/vim-cucumber'              " cucumber support
