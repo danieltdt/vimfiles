@@ -23,9 +23,21 @@ Plugin 'ervandew/supertab'               " completion on insert mode
 Plugin 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
 Plugin 'mattn/emmet-vim'                 " expanding abbreviations
 Plugin 'ctrlpvim/ctrlp.vim'              " file finder
+Plugin 'JazzCore/ctrlp-cmatcher'         " faster ctrlp matcher
 Plugin 'iurifq/ctrlp-rails.vim'          " rails support when finding files
 let g:airline_powerline_fonts = 1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|node_modules|coverage|.log|.git|.hg|.svn|.pyc)$'
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .log
+      \ --ignore "**/*.pyc"
+      \ --ignore tmp
+      \ --ignore node_modules
+      \ --ignore coverage
+      \ -g ""'
 
 " Snippet engine
 if has("python") | Plugin 'SirVer/ultisnips'
