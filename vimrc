@@ -61,6 +61,7 @@ Plugin 'tpope/vim-haml'                  " haml support
 Plugin 'tpope/vim-markdown'              " markdown support
 Plugin 'tpope/vim-cucumber'              " cucumber support
 Plugin 'lervag/vimtex'                   " LaTeX support
+au BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Coloschemes
 Plugin 'altercation/vim-colors-solarized'
