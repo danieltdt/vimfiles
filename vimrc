@@ -49,6 +49,7 @@ Plugin 'honza/vim-snippets'              " community snippets
 
 " Syntax
 Plugin 'scrooloose/syntastic'            " syntax checking
+let g:syntastic_javascript_checkers = ['eslint', 'jslint']
 
 " Git
 Plugin 'tpope/vim-fugitive'              " awesome git wrapper
@@ -80,7 +81,6 @@ Plugin 'moll/vim-node'                   " node.js tools
 Plugin 'tpope/vim-rails'                 " rails tools
 Plugin 'tpope/vim-classpath'             " java classpath support
 Plugin 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
-Plugin 'Shutnik/jshint2.vim'             " a better js lint
 Plugin 'ngmy/vim-rubocop'                " rubocop support
 
 " All of your Plugins must be added before the following line
