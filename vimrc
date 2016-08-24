@@ -1,30 +1,34 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Using Vundle
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"" alternatively, pass a path where Vundle should install plugins
+""call vundle#begin('~/some/path/here')
+
+" Using Plug
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
 " Plugins
 " Environment
-Plugin 'bling/vim-airline'               " better status/tabline
-Plugin 'scrooloose/nerdtree'             " file finder sidebar
-Plugin 'nathanaelkane/vim-indent-guides' " visual indent
-Plugin 'scrooloose/nerdcommenter'        " better commenting
-Plugin 'tpope/vim-repeat'                " better command repeating with map
-Plugin 'tpope/vim-surround'              " better 'surrondings'
-Plugin 'itspriddle/vim-stripper'         " strip trailing whitespace
-Plugin 'ervandew/supertab'               " completion on insert mode
-Plugin 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
-Plugin 'mattn/emmet-vim'                 " expanding abbreviations
-Plugin 'ctrlpvim/ctrlp.vim'              " file finder
-Plugin 'JazzCore/ctrlp-cmatcher'         " faster ctrlp matcher
-Plugin 'iurifq/ctrlp-rails.vim'          " rails support when finding files
+Plug 'bling/vim-airline'               " better status/tabline
+Plug 'scrooloose/nerdtree'             " file finder sidebar
+Plug 'nathanaelkane/vim-indent-guides' " visual indent
+Plug 'scrooloose/nerdcommenter'        " better commenting
+Plug 'tpope/vim-repeat'                " better command repeating with map
+Plug 'tpope/vim-surround'              " better 'surrondings'
+Plug 'itspriddle/vim-stripper'         " strip trailing whitespace
+Plug 'ervandew/supertab'               " completion on insert mode
+Plug 'Raimondi/delimitMate'            " delimiter (quotes, parens, etc) completion
+Plug 'mattn/emmet-vim'                 " expanding abbreviations
+Plug 'ctrlpvim/ctrlp.vim'              " file finder
+Plug 'iurifq/ctrlp-rails.vim'          " rails support when finding files
+Plug 'JazzCore/ctrlp-cmatcher', { 'do': './install.sh' } " faster ctrlp matcher
 let g:airline_powerline_fonts = 1
 let g:ctrlp_custom_ignore = '\v[\/](tmp|node_modules|coverage|.log|.git|.hg|.svn|.pyc)$'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
@@ -40,51 +44,57 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 
 " Snippet engine
-if has("python") | Plugin 'SirVer/ultisnips'
-else             | Plugin 'garbas/vim-snipmate'
+if has("python") | Plug 'SirVer/ultisnips'
+else             | Plug 'garbas/vim-snipmate'
 endif
 
 " Snippets
-Plugin 'honza/vim-snippets'              " community snippets
+Plug 'honza/vim-snippets'              " community snippets
 
 " Syntax
-Plugin 'scrooloose/syntastic'            " syntax checking
+Plug 'scrooloose/syntastic'            " syntax checking
 let g:syntastic_javascript_checkers = ['eslint', 'jslint']
 
 " Git
-Plugin 'tpope/vim-fugitive'              " awesome git wrapper
-Plugin 'gregsexton/gitv'                 " gitk for vim
+Plug 'tpope/vim-fugitive'              " awesome git wrapper
+Plug 'gregsexton/gitv'                 " gitk for vim
 
 " Languages
-Plugin 'vim-ruby/vim-ruby'               " ruby support
-Plugin 'jelera/vim-javascript-syntax'    " javascript support
-Plugin 'tpope/vim-haml'                  " haml support
-Plugin 'tpope/vim-markdown'              " markdown support
-Plugin 'tpope/vim-cucumber'              " cucumber support
-Plugin 'lervag/vimtex'                   " LaTeX support
+Plug 'vim-ruby/vim-ruby'               " ruby support
+Plug 'jelera/vim-javascript-syntax'    " javascript support
+Plug 'tpope/vim-haml'                  " haml support
+Plug 'tpope/vim-markdown'              " markdown support
+Plug 'tpope/vim-cucumber'              " cucumber support
+Plug 'lervag/vimtex'                   " LaTeX support
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Coloschemes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'justincampbell/vim-railscasts'
-Plugin 'wellsjo/wells-colorscheme.vim'
-Plugin 'EHartC/Spink'
-Plugin 'vim-scripts/twilight256.vim'
-Plugin 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'justincampbell/vim-railscasts'
+Plug 'wellsjo/wells-colorscheme.vim'
+Plug 'EHartC/Spink'
+Plug 'vim-scripts/twilight256.vim'
+Plug 'nanotech/jellybeans.vim'
 
 " Dictionaries
-Plugin 'guileen/vim-node-dict'
+Plug 'guileen/vim-node-dict'
 au FileType javascript set dictionary+=~/.vim/bundle/vim-node-dict/dict/node.dict
 
 " Others
-Plugin 'moll/vim-node'                   " node.js tools
-Plugin 'tpope/vim-rails'                 " rails tools
-Plugin 'tpope/vim-classpath'             " java classpath support
-Plugin 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
-Plugin 'ngmy/vim-rubocop'                " rubocop support
+Plug 'moll/vim-node'                   " node.js tools
+Plug 'tpope/vim-rails'                 " rails tools
+Plug 'tpope/vim-classpath'             " java classpath support
+Plug 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
+Plug 'ngmy/vim-rubocop'                " rubocop support
+Plug 'wfleming/vim-codeclimate'        " codeclimate support
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+" Using Vundle
+"call vundle#end()            " required
+
+" Using Plug
+call plug#end()              " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
