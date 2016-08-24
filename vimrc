@@ -87,6 +87,7 @@ Plug 'tpope/vim-classpath'             " java classpath support
 Plug 'rainerborene/vim-reek'           " ruby code smell detection (requires `reek`)
 Plug 'ngmy/vim-rubocop'                " rubocop support
 Plug 'wfleming/vim-codeclimate'        " codeclimate support
+Plug 'beloglazov/vim-online-thesaurus' " thesaurus online
 
 " All of your Plugins must be added before the following line
 " Using Vundle
