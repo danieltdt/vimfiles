@@ -115,6 +115,8 @@ filetype plugin indent on    " required
 syntax on
 set background=dark
 colorscheme jellybeans
+hi NonText ctermbg=none
+hi Normal ctermbg=none
 
 set encoding=utf-8
 
