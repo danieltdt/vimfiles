@@ -11,9 +11,6 @@ filetype off                  " required
 " Using Plug
 call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plug 'gmarik/Vundle.vim'
-
 " Plugins
 " Environment
 Plug 'bling/vim-airline'               " better status/tabline
