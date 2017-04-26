@@ -65,6 +65,7 @@ Plug 'tpope/vim-markdown'              " markdown support
 Plug 'tpope/vim-cucumber'              " cucumber support
 Plug 'lervag/vimtex'                   " LaTeX support
 Plug 'evanmiller/nginx-vim-syntax'     " nginx support
+Plug 'tmux-plugins/vim-tmux'           " vim plugin for tmux.conf
 au BufRead,BufNewFile *.es6 set filetype=javascript
 au BufRead,BufNewFile *nginx/*.conf set filetype=nginx
 
