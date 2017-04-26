@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins
 " Environment
+Plug 'christoomey/vim-tmux-navigator'  " seamless navigation between tmux panes and vim splits
 Plug 'bling/vim-airline'               " better status/tabline
 Plug 'scrooloose/nerdtree'             " file finder sidebar
 Plug 'nathanaelkane/vim-indent-guides' " visual indent
