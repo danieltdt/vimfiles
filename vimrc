@@ -42,8 +42,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 
 " Snippet engine
-if has("python") | Plug 'SirVer/ultisnips'
-else             | Plug 'garbas/vim-snipmate'
+if     has("python")  | Plug 'SirVer/ultisnips'
+elseif has("python3") | Plug 'SirVer/ultisnips'
+else                  | Plug 'garbas/vim-snipmate'
 endif
 
 " Snippets
