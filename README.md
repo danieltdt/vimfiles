@@ -1,3 +1,7 @@
+# DEPRECATED: my vim (now neovim) files lies on danieltdt/dotfiles
+
+---
+
 # My vim files
 
 ## Requirements
